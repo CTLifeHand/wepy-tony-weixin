@@ -1,5 +1,22 @@
 # wepy-tony-weixin
 
+### 可以优化的地方 : 就算我不import 项目一样去解析所有wpy的文件 导致任何一个空文件都会导致报错
+
+- 改成wpy1的后缀就可以了
+
+```
+TypeError: Cannot read property 'script' of null
+    at /usr/local/lib/node_modules/wepy-cli/lib/compile.js:132:28
+    at Array.forEach (<anonymous>)
+    at /usr/local/lib/node_modules/wepy-cli/lib/compile.js:131:49
+    at Array.forEach (<anonymous>)
+    at Object.findReference (/usr/local/lib/node_modules/wepy-cli/lib/compile.js:124:19)
+    at /usr/local/lib/node_modules/wepy-cli/lib/compile.js:361:40
+    at Array.forEach (<anonymous>)
+    at Object.build (/usr/local/lib/node_modules/wepy-cli/lib/compile.js:356:19)
+    at Command.<anonymous> (/usr/local/lib/node_modules/wepy-cli/lib/wepy.js:243:27)
+    at Command.listener (/usr/local/lib/node_modules/wepy-cli/node_modules/commander/index.js:315:8)
+```
 
 
 ### WePY项目构建

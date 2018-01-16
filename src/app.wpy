@@ -1,4 +1,4 @@
-<style type='scss'>
+<style lang="less">
 body {
     margin: 0px;
     padding: 0px;
@@ -30,12 +30,23 @@ export default class extends wepy.app {
   constructor () {
     super()
     this.use('requestfix')
-
-    // this.use('promisify')
   }
 
   onLaunch() {
+    // this.testAsync()
+  }
 
+  sleep (s) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('promise resolved')
+      }, s * 1000)
+    })
+  }
+
+  async testAsync () {
+    const data = await this.sleep(3)
+    console.log(data)
   }
 
   getUserInfo(cb) {

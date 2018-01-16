@@ -72,6 +72,7 @@ export default class Message extends wepy.component {
 
   async loadMessage() {
     this.list = await api.getMessageList()
+    console.log(this.list)
     this.$apply()
   }
 }
