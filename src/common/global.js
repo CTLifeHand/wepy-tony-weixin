@@ -1,5 +1,9 @@
 import m_contacts from '../mocks/contact'
 
+/*
+这个对象是做缓存用的
+脚本语言就是不好 随便存东西 到底有啥都不知道
+*/
 export default {
   getContact(v) {
     if (this._contact) {

@@ -32,9 +32,9 @@ page,
 <script>
 import wepy from 'wepy'
 import Message from '../components/message'
-// import Discovery from '../components/discovery'
-// import Contact from '../components/contact'
-// import Me from '../components/me'
+import Discovery from '../components/discovery'
+import Contact from '../components/contact'
+import Me from '../components/me'
 import Tab from '../components/tab'
 
 import Toast from 'wepy-com-toast'
@@ -48,9 +48,9 @@ export default class Index extends wepy.page {
   }
   components = {
     message: Message,
-    discovery: Message,
-    me: Message,
-    contact: Message,
+    discovery: Discovery,
+    me: Me,
+    contact: Contact,
     tab: Tab,
     toast: Toast
   }
@@ -84,7 +84,7 @@ export default class Index extends wepy.page {
     this.currentTab = 0
     // 不同模块的唯一标识不一样
     // this.$invoke('message', 'loadMessage')
-    this.$invoke('me', 'loadMessage')
+    // this.$invoke('me', 'loadMessage')
   }
 
   /* this.$root.showToast */
