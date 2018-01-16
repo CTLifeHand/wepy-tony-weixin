@@ -38,7 +38,7 @@ import Me from '../components/me'
 import Tab from '../components/tab'
 
 import Toast from 'wepy-com-toast'
-import testMixin from '../mixins/test'
+// import testMixin from '../mixins/test'
 
 export default class Index extends wepy.page {
   config = {
@@ -55,7 +55,7 @@ export default class Index extends wepy.page {
     toast: Toast
   }
 
-  mixins = [testMixin]
+  // mixins = [testMixin]
 
   data = {
     currentTab: 0
@@ -85,6 +85,7 @@ export default class Index extends wepy.page {
     // 不同模块的唯一标识不一样
     // this.$invoke('message', 'loadMessage')
     // this.$invoke('me', 'loadMessage')
+    this.$invoke('message', 'loadMessage')
   }
 
   /* this.$root.showToast */

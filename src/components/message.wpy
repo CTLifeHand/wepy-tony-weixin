@@ -72,7 +72,8 @@ export default class Message extends wepy.component {
 
   onLoad() {
     console.log('组件存在onLoad')
-    this.loadMessage()
+    // 组件没有onShow事件不方便
+    // this.loadMessage()
   }
 
   onShow() {

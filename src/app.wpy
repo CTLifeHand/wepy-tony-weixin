@@ -33,8 +33,8 @@ export default class extends wepy.app {
     super()
     this.use('requestfix')
 
-    // 官方demo取消了这个
-    // this.use('promisify')
+    // 官方demo取消了这个(没有这个所有Promise用不了 API接口中)
+    this.use('promisify')
   }
 
   onLaunch() {
