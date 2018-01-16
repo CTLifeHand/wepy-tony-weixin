@@ -70,9 +70,18 @@ export default class Message extends wepy.component {
     }
   };
 
+  onLoad() {
+    console.log('组件存在onLoad')
+    this.loadMessage()
+  }
+
+  onShow() {
+    console.log('组件不存在onShow')
+    // this.loadMessage()
+  }
+
   async loadMessage() {
     this.list = await api.getMessageList()
-    console.log(this.list)
     this.$apply()
   }
 }

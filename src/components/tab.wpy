@@ -55,6 +55,7 @@ $activecolor: #13b113;
 import wepy from 'wepy'
 
 export default class Tab extends wepy.component {
+  /* 这个是配置而已 */
   props = {
     active: {
       twoWay: true

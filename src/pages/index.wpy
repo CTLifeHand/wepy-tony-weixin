@@ -82,7 +82,8 @@ export default class Index extends wepy.page {
 
   onShow() {
     this.currentTab = 0
-    this.$invoke('message', 'loadMessage')
+    // 不同模块的唯一标识不一样
+    // this.$invoke('message', 'loadMessage')
     this.$invoke('me', 'loadMessage')
   }
 
